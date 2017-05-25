@@ -1,0 +1,23 @@
+{
+  "name": "mocha-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "babel-node ./node_modules/.bin/isparta cover _mocha -- 'test/{,**/}*.test.js' --reporter spec test/",
+    "test2": "babel-node ./node_modules/.bin/isparta cover --include 'src/{,**/}*.{js|jsx}' _mocha -- 'test/{,**/}*.test.js' --reporter spec test/",
+    "test-babel": "mocha --compilers js:babel-core/register  test/{,**/}*.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "chai": "^3.5.0",
+    "isparta": "^4.0.0",
+    "jsdom": "^11.0.0",
+    "mocha": "^3.4.1",
+    "mocha-jsdom": "^1.1.0"
+  }
+}
